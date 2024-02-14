@@ -1,0 +1,11 @@
+body{
+    max-width: 600px;
+    padding-left: 500px;
+}
+.bossz-alf,.alf-hoember{
+    display: flex;
+    flex-direction: row;
+}
+.miazhogynemhoztal{
+    width: 800px;
+}
