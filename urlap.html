@@ -7,71 +7,123 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class"Urlap">
-        <fieldset>
-            <legend>Vélemény</legend>
-            <form>
-                <div>
-                    <label for="name">Teljes név:</label>
-                    <input type="text" id="name" name="name" placeholder="Kis Miska">
-                </div>
 
-                <div>
-                    <label for="country">Ország:</label>
-                    <input type="text" id="country" name="country" placeholder="Magyarország">
-                </div>
-                
-                <label for="">Korosztály</label>
+    <section>
+        <nav>
+            <a href="index.html">
+                <button class='glowing-btn'>
+                    <span class='glowing-txt'>K<span class='faulty-letter'>É</span>PREGÉNY</span>
+                </button>
+            </a>
 
-                <div>
-                    <input type="radio" id="gyerek" name="fav_language" value="gyerek">
-                    <label for="gyerek">7-16</label>
-                </div>
+            <a href="urlap.html">
+                <button class='glowing-btn'>
+                    <span class='glowing-txt'>KÉR<span class='faulty-letter'>D</span>ŐÍV</span>
+                </button>
+            </a>
+        <nav>
 
-                <div>
-                    <input type="radio" id="nagygyerek" name="fav_language" value="nagygyerek">
-                    <label for="nagygyerek">17-25</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="felnott" name="fav_language" value="felnott">
-                    <label for="felnott">26-99</label>
-                </div>
-
-
-                <div>
-                    <label>Véleménykifejtés</label>
-                    <textarea name="comment" placeholder="Úgy gondolom hogy..."></textarea>
-                </div>
-
-
-                <div>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                    <label for="vehicle3"> Szeretném támogatni a képregénysorozatot</label>
-                </div>
+        <div class="Urlap">
+            <fieldset>
+                <legend>Kérdőív</legend>
+                <form>
+                    <div class="felso">
+                        <div class="belso">
+                            <div>
+                                <label for="name">Teljes név:</label>
+                                <input type="text" id="name" name="name" placeholder="Kis Miska"><br>
+                            </div>
+                            <div>
+                                <label for="country">Ország:</label>
+                                <input type="text" id="country" name="country" placeholder="Magyarország"><br>
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="vki@gmail.com">
+                            </div>
+                        </div>
 
 
-                <div>
-                    <button>Kiváncsi</button>
-                    <button>Álmos</button>
-                    <button>Félelemmel teli</button>
-                    <button>Bátor</button>
-                    <button>Magányos</button>
-                    <button>Extatikus</button>
-                    <button>Gyanakvó</button>
-                    <button>Kipihent</button>
-                    <button>Megszégyenült</button>
-                </div>
 
 
-                <div class="panel">
-                    <p class="speech">A speech bubble</p>
-                </div>
+                        <div class="belso">
+                            <div>
+                                <label class="korosztaly" for="">Korosztály</label><br>
+                                <input type="radio" id="gyerek" name="fav_language" value="gyerek">
+                                <label for="gyerek">7-16</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="nagygyerek" name="fav_language" value="nagygyerek">
+                                <label for="nagygyerek">17-25</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="felnott" name="fav_language" value="felnott">
+                                <label for="felnott">26-99</label>
+                            </div>
+                        </div>
+                    </div>
 
 
-                <input type="submit" value="Elküld">
-            </form> 
-        </fieldset>
-    </div>
+
+
+
+
+                   
+
+
+                    <div>
+                        <p class="jeloles">Jelölje be azokat amelyeket a képregény olvasása közben érzett.</p><br>
+                        <input type="checkbox" id="kivancsi" name="kivancsi" value="Kivancsi">
+                        <label for="kivancsi">Kiváncsi</label><br>
+
+                        <input type="checkbox" id="almos" name="almos" value="Almos">
+                        <label for="almos">Álmos</label><br>
+                        <input type="checkbox" id="felelemmelteli" name="felelemmelteli" value="Felelemmelteli">
+                        <label for="felelemmelteli">Félelemmel teli</label><br>
+                        <input type="checkbox" id="bator" name="bator" value="Bator">
+                        <label for="bator">Bátor</label><br>
+                        <input type="checkbox" id="maganyos" name="maganyos" value="Maganyos">
+                        <label for="maganyos">Magányos</label><br>
+                        <input type="checkbox" id="extatikus" name="extatikus" value="extatikus">
+                        <label for="extatikus">Extatikus</label><br>
+                        <input type="checkbox" id="gyanakvo" name="gyanakvo" value="Gyanakvo">
+                        <label for="gyanakvo">Gyanakvó</label><br>
+                        <input type="checkbox" id="kipihent" name="kipihent" value="Kipihent">
+                        <label for="kipihent">Kipihent</label><br>
+                        <input type="checkbox" id="megszegyenult" name="megszegyenult" value="Megszegyenult">
+                        <label for="megszegyenult">Megszégyenült</label><br>
+                    </div>
+
+
+
+
+
+
+                     <div>
+                        <label>Véleménykifejtés</label><br>
+                        <textarea name="comment" placeholder="Úgy gondolom hogy..."></textarea>
+                    </div>
+
+
+                    <div>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> Szeretném támogatni a képregénysorozatot</label>
+                    </div>
+
+
+
+
+                    <input type="submit" value="Elküld">
+                </form>
+            </fieldset>
+        </div>
+
+        <footer>
+            Balázs és Kristóf Grafikai Bt.
+        </footer>
+
+    </section>
 </body>
 </html>
