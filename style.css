@@ -1,46 +1,384 @@
-.speech {
-    background-color:#fff;
-    border:solid 2px #000;
-    border-radius:12px;
-    display:inline-block;
-    margin:.5em;
-    padding:.5em 1em;
-    position:relative;
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 20px 0px;
+  background: black;
+}
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+header p {
+  font-size: 270%;
+  color: white;
+  text-align: center;
+  margin-top: 70px;
+  font-family: "Raleway", sans-serif;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 15px;
+  padding: 10px;
+  width: 70%;
+}
+
+
+
+
+
+
+.Urlap {
+  color: #53cddb;
+}
+legend {
+  font-size: 170%;
+  margin: 0px 50px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 30px;
+  background-color: black;
+}
+fieldset {
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 130%;
+  background-color: #15172b;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+input {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.jeloles {
+  text-align: center;
+}
+
+.felso {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+}
+.belso {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+footer {
+  color: #53cddb;
+  text-align: center;
+  margin: 70px 0px 10px 0px;
+  font-family: Candara;
+}
+
+
+
+
+
+
+
+.elsoKepegy, .elsoKepketto, .elsoKepharom, .masodikKepegy, .masodikKepketto {
+  position: absolute;
+  z-index: 1;
+  padding: 3px;
+  width: 230px;
+  background: white;
+  border-radius: .4em;
+  border: 2px solid black;
+}
+
+
+
+.elsoKepegy {
+  top: 330px;
+  left: 500px;
+}
+.elsoKepketto {
+  top: 540px;
+  left: 680px;
+}
+.elsoKepharom {
+  top: 590px;
+  left: 700px;
+}
+
+
+
+
+.masodikKepegy {
+  top: 320px;
+  right: 400px;
+}
+.masodikKepketto {
+  top: 440px;
+  right: 380px;
+}
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+
+.glowing-btn {
+  margin: 20px;
+}
+
+.kepek, .Urlap {
+  margin-top: 50px;
+}
+
+
+
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7em;
+  font-weight: 900;
+  letter-spacing: 1em;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
   }
-  
-  .speech:before {
-    border:solid 12px transparent;
-    border-left:solid 12px #000;
-    border-top:solid 12px #000;
-    bottom:-24px;
-    content:"";
-    height:0;
-    left:24px;
-    position:absolute;
-    transform:skew(-15deg);
-    width:0;
+  2% {
+    opacity: 0.1;
   }
-  
-  .speech:after {
-    border:solid 10px transparent;
-    border-left:solid 10px #fff;
-    border-top:solid 10px #fff;
-    bottom:-19px;
-    content:"";
-    height:0;
-    left:27px;
-    position:absolute;
-    transform:skew(-15deg);
-    width:0;
+  4% {
+    opacity: 0.5;
   }
-  .panel {
-    background-color:#fff;
-    border:solid 2px #000;
-    box-shadow:0 6px 6px -6px #000;
-    display:inline-block;
-    flex:1 1;
-    height:200px;
-    margin:1vmin;
-    overflow:hidden;
-    position:relative;
+  19% {
+    opacity: 0.5;
   }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
